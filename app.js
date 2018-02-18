@@ -2,12 +2,17 @@
 // requirements 
 var express =  require('express');
 var app = express();
+var bodyParser = require('body-parser');
+
 
 // db connections open
 require('./api/data/dbconnection.js').open();
 
 //path
 var path = require('path');
+
+// Enable parsing of posted forms
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // routes
 var routes = require('./api/route.js');

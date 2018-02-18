@@ -12,5 +12,9 @@ router
     .route('/basic/:hotelId')
     .get(basicCtrl.basicGetOne);
 
+router
+    .route('/basic/newhotel')
+    .post(basicCtrl.basicAddOne);
+
 
 module.exports = router;
